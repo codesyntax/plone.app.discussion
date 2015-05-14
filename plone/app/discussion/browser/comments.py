@@ -195,7 +195,7 @@ class CommentForm(extensible.ExtensibleForm, form.Form):
         elif not portal_membership.isAnonymousUser() and can_reply:
             # Member
             member = portal_membership.getAuthenticatedMember()
-            username = member.getUserName()
+            username = member.getId()
             user = member.getUser()
             email = member.getProperty('email')
             fullname = member.getProperty('fullname')
